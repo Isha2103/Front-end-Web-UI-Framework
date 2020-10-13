@@ -16,11 +16,16 @@
 </head>
 
 <body>
+     <!--bg-primary is removed form navbar-->
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
+            <!--entered a toggle button for extra small screens-->
+            <!---- this button acts as the toggle for the navbar items.-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
+       <!---<a class="navbar-brand" href="#">Ristorante Con Fusion</a>-->
+       <!---- add the logo to the navbar-->
            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
             
            <div class="collapse navbar-collapse" id="Navbar">
@@ -85,96 +90,20 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
+                <!---add the restaurant logo to the Jumbotron-->
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
+                <!---assignment 2 adding button-->
                 <div class="col-12 col-sm align-self-center">
-                    <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#tableModal" role="button" class="btn btn-block nav-link btn-warning">Reserve Table</a>
-                    </span>
+                    <!--adding a tooltip-->
+                    <a role="button" class="btn btn-block nav-link btn-warning"
+                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
-
-<!-------adding a modal for reserve table button ------>
-<div id="tableModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg" role="content">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Reserve a Table </h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-form-label offset-1">Number of Guests</label>
-                        <div class="col-md-9">
-                            <div class="radio" data-toggle="radio">
-                                <label class="btn">
-                                 <input type="radio" name="nbPeople" value="1"> 1
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="nbPeople" value="2"> 2
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="nbPeople" value="3"> 3
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="nbPeople" value="4"> 4
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="nbPeople" value="5"> 5
-                                </label>
-                                <label class="btn">
-                                    <input type="radio" name="nbPeople" value="6"> 6
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="section" class="col-md-2 col-form-label offset-1">Section</label>
-                        <div class="col-md-4">
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                              <label class="btn btn-success active">
-                                <input type="radio" name="section" id="nonsmoking" autocomplete="off" checked>Non-Smoking
-                              </label>
-                              <label class="btn btn-danger">
-                                <input type="radio" name="section" id="smoking" autocomplete="off"> Smoking
-                              </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="lastname" class="col-md-2 col-form-label offset-1">Date and Time</label>
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-    
 
     <!-----Adding a row for the carousel-->
     <div class="row row-content">
@@ -240,7 +169,7 @@
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col col-sm order-sm-first col-md">
-                <!---adding media objects-->
+                <!---adding meia objects-->
                 <div class="media">
                     <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
                     <div class="media-body">
@@ -255,6 +184,24 @@
             </div>
         </div>
 
+
+ <!---old version of code--<div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3">
+                <h3>This Month's Promotions</h3>
+            </div>
+            <div class="col col-sm col-md">
+                <!----added media objects-->
+      <!----          <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Grand Buffet">
+                </div>
+            </div>
+        </div> ---->
+
+        <!--assignment 2-->
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-3">
                 <h3>This Month's Promotions</h3>
@@ -291,6 +238,64 @@
         </div>
     </div>
 
+    <!---- reserve table card-->
+    <div class="row row-content align-items-center" id="reservationForm">
+        <div class="col-12 offset-0 col-md-8 offset-md-2">
+            <div class="card">
+                <h3 class="card-header bg-warning text-white">Reserve a table</h3>
+                <div class="card-block">
+                    <form>
+                        <div class="form-group row">
+                            <label for="firstname" class="col-md-2 col-form-label offset-1">Number of Guests</label>
+                            <div class="col-md-9">
+                                <div class="radio" data-toggle="radio">
+                                    <label class="btn">
+                                     <input type="radio" name="nbPeople" value="1"> 1
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="2"> 2
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="3"> 3
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="4"> 4
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="5"> 5
+                                    </label>
+                                    <label class="btn">
+                                        <input type="radio" name="nbPeople" value="6"> 6
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lastname" class="col-md-2 col-form-label offset-1">Date and Time</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input class="form-control" type="date" name="dateBooking" value="" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input class="form-control" type="hour" name="hourBooking" value="" placeholder="Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -309,13 +314,27 @@
 		              121, Clear Water Bay Road<br>
 		              Clear Water Bay, Kowloon<br>
                       HONG KONG<br>
-                     
+                      <!-- Tel.: +852 1234 5678<br>
+		              Fax: +852 8765 4321<br>
+                      Email: <a href="mailto:confusion@food.net">confusion@food.net</a>-->
+                      
+                      <!---added font icons-->
                       <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
                       <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
                       <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
+
+                <!---old version <div class= "text-center">
+                        <a href="http://google.com/+">Google+</a>
+                        <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
+                        <a href="http://www.linkedin.com/in/">LinkedIn</a>
+                        <a href="http://twitter.com/">Twitter</a>
+                        <a href="http://youtube.com/">YouTube</a>
+                        <a href="mailto:">Mail</a>
+                    </div> -->
+                <!--- added bootstrap social classes-->
                 <div class="text-center">
                     <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
                     <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
@@ -337,6 +356,12 @@
    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-------------tooltip needs to be activated by adding a small Javascript code-->
+   <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+   </script>
 </body>
 
 </html>
